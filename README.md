@@ -10,3 +10,4 @@ My first Redux app :D
 * use flow
 * cancel action
 * implements tests
+* eslint
