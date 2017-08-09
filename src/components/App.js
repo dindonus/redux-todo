@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import './App.css';
+import AddTodo from '../containers/AddTodo'
 
 class App extends Component {
   render() {
@@ -11,8 +12,9 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
-          My own todo app!
+          My first Redux app!
         </p>
+        <AddTodo />
       </div>
     );
   }
