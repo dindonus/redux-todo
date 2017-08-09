@@ -14,7 +14,7 @@ class App extends Component {
         <p className="App-intro">
           My first Redux app!
         </p>
-        <AddTodo />
+        <AddTodo name="Nicolas" />
       </div>
     );
   }
