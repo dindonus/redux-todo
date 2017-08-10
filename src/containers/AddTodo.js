@@ -1,35 +1,21 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import SingleInputForm from '../components/SingleInputForm'
 
-class AddTodo extends Component {
-  constructor() {
-    super()
-    this.input = null
-  }
-  onSubmit(event) {
-    event.preventDefault()
-    if (!this.input.value.trim()) {
-      return
-    }
-    this.props.dispatch(addTodo(this.input.value))
-    this.input.value = ''
-  }
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <input ref={node => {this.input = node}} />
-          <button type="submit">Add Todo</button>
-        </form>
-        {this.props.name} is {this.props.occupation}
-      </div>
-    )
-  }
-}
+const AddTodo = ({name, occupation, onSubmit}) => (
+  <SingleInputForm onSubmit={onSubmit} text="Add Todo" subtitle={`${name} is ${occupation}`} />
+)
 
 const mapStateToProps = (state) => ({
-  occupation: "passing props"
+  name: "Nicolas",
+  occupation: "passing props",
 })
 
-export default AddTodo = connect(mapStateToProps)(AddTodo)
+const mapDispatchToProps = (dispatch) => ({
+  onSubmit: (value) => {
+    dispatch(addTodo(value));
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodo);
