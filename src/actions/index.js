@@ -1,12 +1,15 @@
 let nextTodoId = 0;
-export const addTodo = (text) => {
-  console.log('ADD_TODO', text);
-  return {
-    type: 'ADD_TODO',
-    id: nextTodoId++,
-    text,
-  };
+
+const getId = () => {
+  nextTodoId += 1;
+  return nextTodoId;
 };
+
+export const addTodo = text => ({
+  type: 'ADD_TODO',
+  id: getId(),
+  text,
+});
 
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',

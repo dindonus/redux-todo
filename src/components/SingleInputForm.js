@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class SingleInputForm extends Component {
   constructor(props) {
@@ -24,5 +25,11 @@ class SingleInputForm extends Component {
     );
   }
 }
+
+SingleInputForm.propTypes = {
+  subtitle: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default SingleInputForm;

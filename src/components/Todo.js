@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Todo = ({ onClick, completed, text }) => {
   const style = { textDecoration: completed ? 'line-through' : 'none' };
   return (
-    <li onClick={onClick} style={style}>
-      {text}
+    <li style={style}>
+      <button onClick={onClick}>mark as {completed ? 'undone' : 'done'}</button> {text}
     </li>
   );
 };
