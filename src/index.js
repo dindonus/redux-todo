@@ -8,10 +8,20 @@ import reducer from './reducers/index'
 import './index.css'
 
 const store = createStore(reducer)
+const renderApp = (app) => {
+  ReactDOM.render(
+    <Provider store={store}>
+      {app}
+    </Provider>, document.getElementById('root')
+  )
+}
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>, document.getElementById('root'));
+renderApp(<App />)
+registerServiceWorker()
 
-registerServiceWorker();
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    const NextApp = require('./components/App').default
+    renderApp(<NextApp />)
+  })
+}

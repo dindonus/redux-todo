@@ -1,13 +1,15 @@
 # redux-todo
 My first Redux app :D
 
+## Features
+* hot module reloading
 
 ## Todos
-
-* make it works
-* add a router and some pages
+* eslint
 * check proptypes
+* implements tests
+* eject and add state conservative hmr
+* add a router and some pages
 * use flow
 * cancel action
-* implements tests
-* eslint
+* add style and animations
