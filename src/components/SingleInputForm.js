@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 
 class SingleInputForm extends Component {
   constructor(props) {
@@ -8,8 +8,8 @@ class SingleInputForm extends Component {
 
   onSubmit(submitMethod, event) {
     event.preventDefault();
-    submitMethod(this.input.value)
-    this.input.value = ''
+    submitMethod(this.input.value);
+    this.input.value = '';
   }
 
   render() {
@@ -21,8 +21,8 @@ class SingleInputForm extends Component {
         </form>
         {this.props.subtitle}
       </div>
-    )
+    );
   }
 }
 
-export default SingleInputForm
+export default SingleInputForm;
