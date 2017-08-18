@@ -1,23 +1,17 @@
 import React from 'react';
-import logo from '../images/logo.svg';
-import './App.css';
+import Card from './Card';
+import VisibleTodoList from '../containers/VisibleTodoList';
 import AddTodo from '../containers/AddTodo';
 import Footer from '../components/Footer';
-import VisibleTodoList from '../containers/VisibleTodoList';
 
 const App = () => (
-  <div className="App">
-    <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h2>My Redux app</h2>
+  <Card>
+    <div className="App">
+      <VisibleTodoList />
+      <AddTodo />
+      <Footer />
     </div>
-    <p className="App-intro">
-      Header
-    </p>
-    <VisibleTodoList />
-    <AddTodo name="Nicolas" />
-    <Footer />
-  </div>
+  </Card>
 );
 
 export default App;

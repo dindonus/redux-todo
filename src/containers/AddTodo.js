@@ -5,13 +5,10 @@ import { addTodo } from '../actions';
 import SingleInputForm from '../components/SingleInputForm';
 
 const AddTodo = ({ name, occupation, onSubmit }) => (
-  <SingleInputForm onSubmit={onSubmit} text="Add Todo" subtitle={`${name} is ${occupation}`} />
+  <SingleInputForm onSubmit={onSubmit} text="Add Todo" />
 );
 
-const mapStateToProps = () => ({
-  name: 'Nicolas',
-  occupation: 'passing props',
-});
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => ({
   onSubmit: (value) => {
@@ -20,8 +17,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 AddTodo.propTypes = {
-  name: PropTypes.string.isRequired,
-  occupation: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 

@@ -1,5 +1,12 @@
 body {
+  background: linear-gradient(to right, #f2efea, #f2ebe1);
   margin: 0;
   padding: 0;
+  height: 100vh;
   font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
 }

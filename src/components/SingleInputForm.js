@@ -20,14 +20,12 @@ class SingleInputForm extends Component {
           <input ref={(node) => { this.input = node; }} />
           <button type="submit">{this.props.text}</button>
         </form>
-        {this.props.subtitle}
       </div>
     );
   }
 }
 
 SingleInputForm.propTypes = {
-  subtitle: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
