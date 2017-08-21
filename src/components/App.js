@@ -6,15 +6,17 @@ import AddTodo from '../containers/AddTodo';
 
 const App = () => (
   <Card>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/add">Add</Link></li>
-    </ul>
-    <div className="App">
-      <Switch>
-        <Route exact path="/" component={VisibleTodoList} />
-        <Route path="/add" component={AddTodo} />
-      </Switch>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/add">Add</Link></li>
+      </ul>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={VisibleTodoList} />
+          <Route path="/add" component={AddTodo} />
+        </Switch>
+      </div>
     </div>
   </Card>
 );
